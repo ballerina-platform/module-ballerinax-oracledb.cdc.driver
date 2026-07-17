@@ -1,0 +1,39 @@
+[package]
+org = "ballerinax"
+name = "oracledb.cdc.driver"
+version = "@toml.version@"
+authors = ["Ballerina"]
+keywords = ["CDC", "Debezium", "Oracle", "OracleDB", "Area/Database", "Type/Driver", "Vendor/Red Hat"]
+repository = "https://github.com/ballerina-platform/module-ballerinax-oracledb.cdc.driver"
+icon = "icon.png"
+license = ["Apache-2.0"]
+distribution = "2201.13.0"
+
+[platform.java21]
+graalvmCompatible = true
+
+[[platform.java21.dependency]]
+groupId = "io.ballerina.lib"
+artifactId = "oracledb.cdc.driver-native"
+version = "@toml.version@"
+path = "../native/build/libs/oracledb.cdc.driver-native-@project.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "io.debezium"
+artifactId = "debezium-connector-oracle"
+version = "@debezium.version@"
+path = "./lib/debezium-connector-oracle-@debezium.version@.jar"
+
+# Provides io.debezium.antlr.AntlrDdlParser, required by the Oracle connector for redo-log DDL parsing.
+[[platform.java21.dependency]]
+groupId = "io.debezium"
+artifactId = "debezium-ddl-parser"
+version = "@debezium.version@"
+path = "./lib/debezium-ddl-parser-@debezium.version@.jar"
+
+# Runtime dependency of debezium-ddl-parser (org.antlr.v4.runtime.*).
+[[platform.java21.dependency]]
+groupId = "org.antlr"
+artifactId = "antlr4-runtime"
+version = "@antlr4.version@"
+path = "./lib/antlr4-runtime-@antlr4.version@.jar"
