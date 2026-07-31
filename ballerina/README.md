@@ -7,7 +7,7 @@ The Oracle Change Data Capture (CDC) driver enables capturing and tracking data 
 - Real-time capturing of data changes (Insert, Update, Delete)
 - Seamless streaming of data modifications to downstream systems
 - Reliable tracking of database changes with minimal overhead
-- Support for various CDC mechanisms and configurations
+- Support for the LogMiner-based CDC flow and its configuration
 - Secure communication and efficient data handling
 - GraalVM compatible for native image builds
 
@@ -19,7 +19,7 @@ It enables listening to changes in Oracle databases seamlessly within Ballerina 
 
 | |     Version     |
 |:---|:---------------:|
-|Ballerina Language |  **2201.13.0**   |
+|Ballerina Language |  **2201.12.0**   |
 |Debezium Oracle Driver | **3.5.1.Final** |
 
 ## Usage

@@ -13,7 +13,7 @@ It enables listening to changes in Oracle databases seamlessly within Ballerina 
 
 | |     Version     |
 |:---|:---------------:|
-|Ballerina Language |  **2201.13.0**   |
+|Ballerina Language |  **2201.12.0**   |
 |Debezium Oracle Driver | **3.5.1.Final** |
 
 ## Usage
