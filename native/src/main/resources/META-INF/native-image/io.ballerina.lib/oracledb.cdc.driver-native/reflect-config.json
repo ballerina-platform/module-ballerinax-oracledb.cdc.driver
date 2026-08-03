@@ -1,0 +1,22 @@
+[
+{
+  "name":"io.debezium.connector.oracle.OracleConnector",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"io.debezium.connector.oracle.OracleConnectorTask",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"io.debezium.connector.oracle.OracleSourceInfoStructMaker",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"io.debezium.connector.oracle.snapshot.lock.NoSnapshotLock",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"io.debezium.connector.oracle.snapshot.query.SelectAllSnapshotQuery",
+  "queryAllPublicMethods":true
+}
+]
