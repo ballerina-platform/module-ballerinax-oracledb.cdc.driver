@@ -22,6 +22,12 @@ plugins {
     id 'io.ballerina.plugin'
 }
 
+abstract class ExecHelper {
+    @Inject
+    abstract ExecOperations getExecOperations()
+}
+def execHelper = project.objects.newInstance(ExecHelper)
+
 description = 'Oracle CDC Driver - Ballerina'
 
 def packageName = "oracledb.cdc.driver"
@@ -48,7 +54,7 @@ ballerina {
     packageOrganization = packageOrg
     module = packageName
     langVersion = ballerinaLangVersion
-    isConnector = true
+    connector = true
 }
 
 tasks.register('updateTomlFiles') {
@@ -63,7 +69,7 @@ tasks.register('updateTomlFiles') {
 
 tasks.register('commitTomlFiles') {
     doLast {
-        project.exec {
+        execHelper.execOperations.exec {
             ignoreExitValue true
             if (Os.isFamily(Os.FAMILY_WINDOWS)) {
                 commandLine 'cmd', '/c', "git commit -m \"[Automated] Update the toml files\" Ballerina.toml Dependencies.toml"

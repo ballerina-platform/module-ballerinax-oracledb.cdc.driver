@@ -26,8 +26,6 @@ tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
 
-sourceCompatibility = JavaVersion.VERSION_21
-
 compileJava {
     doFirst {
         options.compilerArgs = [
